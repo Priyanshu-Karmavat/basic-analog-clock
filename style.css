@@ -23,6 +23,7 @@ body {
   align-items: center;
   height: 100%;
 }
+
 @media (max-width: 480px) {
   #clock {
     font-size: 5vw;
