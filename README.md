@@ -20,7 +20,7 @@ A simple digital clock built using **HTML, CSS, and JavaScript**. The clock disp
 
 ```text
 digital-clock/
-│── Analog_clock
+│── index.html
 │── style.css
 │── script.js
 └── README.md
