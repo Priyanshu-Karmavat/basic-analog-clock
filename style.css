@@ -1,19 +1,76 @@
-        #clock {
-            border: solid 2px whitesmoke;
-            width: 40%;
-            font-size: 10vw;
-            padding-left: 20px;
-            box-sizing: border-box;
-        }
+#clock {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  font-size: clamp(3rem, 10vw, 8rem);
+  text-align: center;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  letter-spacing: 4px;
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 17%;
-        }
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px white;
+  }
+  to {
+    box-shadow: 0 0 30px white;
+  }
+}
 
-        body {
-            background-color: black;
-            color: whitesmoke;
-        }
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-center;
+  align-items: center;
+  gap: 30px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle at center,
+    rgb(97, 45, 181),
+    rgb(16, 16, 128)
+  );
+  color: whitesmoke;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+#formatBtn {
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: aliceblue;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-image: radial-gradient(circle at center, skyblue, darkblue);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+#formatBtn:hover {
+  background-image: radial-gradient(
+    circle at center,
+    rgb(135, 179, 197),
+    rgb(70, 70, 182)
+  );
+  box-shadow: 0 5px 15px rgba(0, 0, 0.3);
+}
+
+#formatBtn:active {
+  transform: scale(0.97);
+}
