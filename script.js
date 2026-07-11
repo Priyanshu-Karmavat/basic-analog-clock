@@ -6,7 +6,7 @@ const formatBtn = document.getElementById("formatBtn");
 formatBtn.addEventListener("click", () => {
     twelveFormat = !twelveFormat;
     formatBtn.textContent = twelveFormat
-        ? "Switch to 24 Hpurs"
+        ? "Switch to 24 Hours"
         : "Switch to 12 Hours";
     updatetime();
 })
